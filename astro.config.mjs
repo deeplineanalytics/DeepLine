@@ -8,6 +8,8 @@ import lit from "@astrojs/lit";
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-  site: 'https://deeplineanalytics.github.io',
-  base: '/DeepLine',
+  site: 'https://deeplineanalytics.github.io/DeepLine', // Replace with your GitHub Pages URL
+  base: '/DeepLine/',
 });
+
+
