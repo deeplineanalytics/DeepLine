@@ -1,0 +1,42 @@
+:root {
+	color-scheme: dark;
+	
+	/* Theme Colors - Dark Theme Integrated */
+	--theme-primary: hsl(0, 0%, 100%);
+	--theme-primary-hover: hsl(0, 0%, 90%);
+	--theme-on-primary: hsl(0, 0%, 0%);
+
+	--theme-bg: hsl(0, 0%, 2%);
+	--theme-on-bg: hsl(0, 0%, 100%);
+
+	--theme-surface-1: hsl(0, 0%, 20%);
+	--theme-on-surface-1: hsl(0, 0%, 100%);
+
+	--theme-surface-2: #203422;
+	--theme-on-surface-2: #ffffff;
+
+	/* Theme Shapes */
+	--theme-shape-radius: 0;
+	--theme-button-border-radius: 3rem;
+
+	/* Theme Transition */
+	--theme-transition: 0.2s ease-in-out;
+
+	/* Theme Layout */
+	--section-margin: 3rem;
+	--theme-grid-gap: 1rem;
+	--container-max-width: 1440px;
+	--container-max-width-narrow: 960px;
+	--container-padding: 0 1rem;
+
+	--theme-blog-post-header-width: 1200px;
+
+	/* Theme Fonts */
+	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
+		Times, serif;
+	--theme-font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont,
+		sans-serif;
+
+	/* Form Fields */
+	--form-field-input-color: var(--theme-on-bg);
+}

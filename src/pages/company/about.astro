@@ -1,0 +1,175 @@
+---
+import { TextSection, Button } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'About Deepline | We are fixing the hardest entry point in ML: setup',
+	description: 'Deepline is building the entry point to production ML by removing setup complexity in pipelines.',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>We are fixing the hardest entry point in ML: setup</h1>
+			<p>
+				Deepline is building the entry point to production ML by removing setup complexity in pipelines. Today we focus on simplifying Airflow + MLflow setup; later we will expand into monitoring, retraining, and portability.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/home/classic-hero.jpg"
+				alt="Deepline Team"
+				id="about-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+	
+	<TextSection narrow>
+		<h2>The Thesis</h2>
+		
+		<h3>The Problem</h3>
+		<p>Pipeline setup is slow, brittle, and inconsistent. Teams waste weeks on configuration before they can focus on the actual machine learning work that drives value.</p>
+		
+		<h3>Why Existing Tools Fail</h3>
+		<p>Current solutions create vendor lock-in, require extensive manual configurations, and introduce too many moving parts. This complexity compounds over time, creating operational debt before teams even reach production.</p>
+		
+		<h3>Our Contrarian View</h3>
+		<p>We believe you should start with setup, build credibility with immediate value, and then layer in monitoring and retraining capabilities. Most platforms try to solve everything at once - we focus on the sharpest pain point first.</p>
+
+		<h2>What We Are Building</h2>
+		<p><strong>Today:</strong> A setup simplification layer for Airflow and MLflow that reduces weeks of configuration to a single YAML file and two commands.</p>
+		<p><strong>Tomorrow:</strong> Our roadmap expands into three key phases - Observe (monitoring and drift detection), Adapt (safe retraining workflows), and Port (cloud-agnostic deployment).</p>
+
+		<h2>Roadmap</h2>
+		<div class="roadmap-timeline">
+			<div class="roadmap-item">
+				<strong>Q4 2025:</strong> Public beta (setup automation for tabular + time series)
+			</div>
+			<div class="roadmap-item">
+				<strong>Q1 2026:</strong> Monitoring and drift detection
+			</div>
+			<div class="roadmap-item">
+				<strong>Q1 2026:</strong> Retraining workflows + on-prem runner
+			</div>
+		</div>
+
+		<h2>Team</h2>
+		<div class="team-members">
+			<div class="team-member">
+				<h3>Taimoor, Founder & CEO</h3>
+				<p>Data Scientist and AI Engineer, leading Deepline to eliminate ML pipeline setup complexity.</p>
+			</div>
+			<div class="team-member">
+				<h3>Abdul, Chief of Engineering</h3>
+				<p>Systems design engineer, leading technical architecture and execution.</p>
+			</div>
+		</div>
+
+		<h2>Operating Principles</h2>
+		<ol class="principles-list">
+			<li>Solve the sharpest pain first</li>
+			<li>Truth over status</li>
+			<li>Quantify or delete</li>
+			<li>Default to automation</li>
+			<li>Portability first</li>
+		</ol>
+	</TextSection>
+</Layout>
+
+<style>
+	.roadmap-timeline {
+		margin: 1.5rem 0;
+		padding-left: 1rem;
+		border-left: 3px solid var(--theme-primary);
+	}
+
+	.roadmap-item {
+		margin-bottom: 1rem;
+		padding-left: 1rem;
+		position: relative;
+	}
+
+	.roadmap-item::before {
+		content: '';
+		position: absolute;
+		left: -8px;
+		top: 8px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: var(--theme-primary);
+	}
+
+	.team-members {
+		margin: 2rem 0;
+	}
+
+	.team-member {
+		margin-bottom: 2rem;
+		padding: 1.5rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.team-member h3 {
+		color: var(--theme-on-surface-1);
+		margin-bottom: 0.5rem;
+	}
+
+	.team-member p {
+		color: var(--theme-on-surface-1);
+		margin: 0;
+	}
+
+	.principles-list {
+		padding-left: 1.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.principles-list li {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+	}
+
+	.cta-section {
+		margin-top: 3rem;
+		padding: 2rem;
+		background: var(--theme-surface-2);
+		border-radius: var(--theme-shape-radius);
+		text-align: center;
+	}
+
+	.cta-section h2 {
+		color: var(--theme-on-surface-2);
+		margin-bottom: 1rem;
+	}
+
+	.cta-description {
+		color: var(--theme-on-surface-2);
+		font-size: 1.1rem;
+		margin-bottom: 1.5rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media (max-width: 768px) {
+		.roadmap-timeline {
+			padding-left: 0.5rem;
+		}
+		
+		.roadmap-item {
+			padding-left: 0.5rem;
+		}
+		
+		.team-member {
+			padding: 1rem;
+		}
+		
+		.cta-section {
+			padding: 1.5rem;
+		}
+	}
+</style>

@@ -1,0 +1,37 @@
+---
+import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey-theme';
+
+const selectOptions = [
+  "Google Search",
+  "LinkedIn", 
+  "Twitter",
+  "Referral",
+  "Other"
+]
+---
+
+<!-- Replace YOUR_FORM_ID with your actual Formspree form ID -->
+<form name="Deepline Contact" method="POST" action="https://formspree.io/f/xovnnebq">
+  <!-- Hidden fields for better email organization -->
+  <input type="hidden" name="_subject" value="New Deepline Beta Request">
+  <input type="hidden" name="_next" value="/contact-thank-you">
+  
+  <FormInput type="text" label="Name" name="name" placeholder="Your name" required />
+  <FormInput type="email" label="Email" name="email" placeholder="your@email.com" required />
+  <FormInput type="text" label="Company" name="company" placeholder="Your company (optional)" />
+  <FormSelect label="How did you hear about us?" name="source" options={selectOptions} />
+  <FormTextarea label="Message" name="message" placeholder="Tell us about your ML pipeline challenges or interest in beta access..." required />
+  
+  <!-- Spam protection -->
+  <input type="text" name="_gotcha" style="display:none">
+  
+  <Button type="submit">Send Message</Button>
+</form>
+
+<style>
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+</style>

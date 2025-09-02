@@ -1,0 +1,242 @@
+---
+import { Icon } from 'astro-icon/components';
+import {
+	AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	StickyTextImageSection,
+	CtaCardSection,
+} from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Deepline | Cut ML Pipeline Setup to Hours',
+	description: 'Automate ML pipeline setup with Airflow and MLflow. Go from baseline to production in hours, not weeks.',
+};
+---
+
+
+<Layout {seo}>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Cut ML pipeline setup complexity down to hours</h1>
+			<p>Deepline starts by automating setup with Airflow and MLflow. Monitoring, retraining, and cloud portability are planned next.</p>
+			</div>
+		</div>
+		<div slot="btns-container">
+			<Button href="/company/contact" customIcon
+				>Request Early Access <Fragment slot="icon">
+					<Icon name="ic:baseline-chevron-right" />
+				</Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/landing-hero-1.jpg"
+				alt="Deepline ML Pipeline Dashboard"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="Pipeline setup used to take our team 3-4 weeks before we could even start experimenting. With Deepline, we went from idea to running pipeline in a single afternoon. Game changer."
+		customerName="Data Science Lead, Series B Startup"
+	/>
+
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Why (The Pain)</h2>
+			<p>
+				Pipelines stall on setup and upkeep. Complex stack sprawl with MLflow + Airflow + custom scripts means setup drag eats weeks before value appears. Ops debt builds before teams even reach monitoring or retraining.
+			</p>
+		</div>
+		<div slot="column-2-body">
+			<h2>How (Our Approach)</h2>
+			<p>
+				We solve setup first, then expand. Our current focus is <strong>Scaffold</strong> - generating pipelines with minimal configuration to get you from weeks to hours. Next comes <strong>Observe</strong> with unified drift and performance monitoring, followed by <strong>Adapt</strong> for safe retraining workflows, and finally <strong>Port</strong> with cloud-agnostic runners.
+			</p>
+		</div>
+		<div slot="column-3-body">
+			<h2>What (The Product)</h2>
+			<p>
+				Integration wizard for MLflow + Airflow (current). Auto-generated eval dashboards, PII/data quality guardrails, and retraining schedulers with rollback (planned roadmap).
+			</p>
+		</div>
+	</ThreeColumnTextSection>
+
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>What We're Building</h2>
+			
+			<div class="feature-item current">
+				<h3>🔧 Integration Wizard</h3>
+				<span class="status-badge available">Available Now</span>
+				<p>
+					Automated MLflow and Airflow setup with minimal configuration. Generate production-ready pipelines from a single YAML file and two commands.
+				</p>
+			</div>
+			
+			<div class="feature-item">
+				<h3>📊 Auto-Generated Eval Dashboards</h3>
+				<span class="status-badge planned">Planned</span>
+				<p>
+					Comprehensive evaluation dashboards that automatically surface model performance metrics, data drift indicators, and pipeline health status.
+				</p>
+			</div>
+			
+			<div class="feature-item">
+				<h3>🛡️ Guardrails: PII Checks & Data Quality Gates</h3>
+				<span class="status-badge planned">Planned</span>
+				<p>
+					Built-in protection against data leaks and quality issues. Automated PII detection and configurable data quality thresholds before model training.
+				</p>
+			</div>
+			
+			<div class="feature-item">
+				<h3>🔄 Retraining Schedulers with Rollback</h3>
+				<span class="status-badge planned">Planned</span>
+				<p>
+					Safe, automated retraining workflows with intelligent rollback capabilities. Deploy with confidence knowing you can always revert to previous model versions.
+				</p>
+			</div>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/landing-sticky.jpg"
+				alt="Deepline Platform Features"
+				loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+		id="cta"
+	>
+		<h2>Get started by simplifying your ML pipeline setup</h2>
+		<p>
+			Join the beta and be among the first to experience ML pipeline setup that takes hours, not weeks. Public beta launching Q4 2025.
+		</p>
+		<Button href="/company/contact" customIcon
+			>Request Access <Fragment slot="icon">
+				<Icon name="ic:baseline-chevron-right" />
+			</Fragment></Button
+		>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	.proof-points {
+		margin-top: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.proof-item {
+		display: flex;
+		flex-direction: column;
+		padding: 0.5rem 0;
+	}
+
+	.proof-item strong {
+		color: var(--theme-on-bg);
+		font-weight: 600;
+	}
+
+	.proof-item span {
+		color: var(--theme-on-bg);
+		opacity: 0.7;
+		font-size: 0.9rem;
+	}
+
+	.proof-points {
+		margin-top: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.proof-item {
+		display: flex;
+		flex-direction: column;
+		padding: 0.5rem 0;
+	}
+
+	.proof-item strong {
+		color: var(--theme-on-bg);
+		font-weight: 600;
+	}
+
+	.proof-item span {
+		color: var(--theme-on-bg);
+		opacity: 0.7;
+		font-size: 0.9rem;
+	}
+
+	.feature-item {
+		margin-bottom: 2rem;
+		padding: 1.5rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		position: relative;
+	}
+
+	.feature-item.current {
+		border-left: 4px solid var(--theme-primary);
+	}
+
+	.feature-item h3 {
+		color: var(--theme-on-surface-1);
+		margin-bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.status-badge {
+		font-size: 0.75rem;
+		padding: 0.25rem 0.75rem;
+		border-radius: 1rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.status-badge.available {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	.status-badge.planned {
+		background: var(--theme-surface-2);
+		color: var(--theme-on-surface-2);
+		opacity: 0.8;
+	}
+
+	.feature-item p {
+		color: var(--theme-on-surface-1);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.proof-points {
+			margin-top: 1rem;
+		}
+		
+		.feature-item {
+			padding: 1rem;
+		}
+		
+		.feature-item h3 {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+	}
+</style>

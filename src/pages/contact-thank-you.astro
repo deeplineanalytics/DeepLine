@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Page.astro';
+import { Container, Button } from '@components/odyssey-theme';
+
+const seo = {
+	title: 'Thank You | Deepline',
+	description: 'Thanks for reaching out! We\'ll get back to you soon.',
+};
+---
+
+<Layout {seo}>
+	<Container>
+		<section class="thank-you-section">
+			<div class="thank-you-content">
+				<h1>Message Received!</h1>
+				<p>
+					Thanks for reaching out about Deepline. We've received your message and will get back to you within 24 hours.
+				</p>
+				<p>
+					If you're interested in beta access, we'll be in touch soon with next steps. In the meantime, feel free to connect with us on social media for updates.
+				</p>
+				<div class="action-buttons">
+					<Button href="/">Back to Home</Button>
+					<Button href="/about" outlined>Learn More About Us</Button>
+				</div>
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.thank-you-section {
+		margin: var(--section-margin) auto;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.thank-you-content {
+		text-align: center;
+		max-width: 600px;
+		padding: 3rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.thank-you-content h1 {
+		color: var(--theme-on-surface-1);
+		margin-bottom: 1.5rem;
+	}
+
+	.thank-you-content p {
+		color: var(--theme-on-surface-1);
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+	}
+
+	.action-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.thank-you-content {
+			padding: 2rem 1rem;
+		}
+
+		.action-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>
