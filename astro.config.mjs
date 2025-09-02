@@ -6,8 +6,7 @@ import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://deeplineanalytics.github.io/DeepLine/', // Your public URL
-  base: '/DeepLine/', // Match your repository name (use this if it's a GitHub Project site)
+  site: 'https://odyssey-theme.sapling.supply/', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: true, // Generate sitemap (set to "false" to disable)
   integrations: [sitemap(), mdx(), lit(), icon()], // Add renderers to the config
 });
